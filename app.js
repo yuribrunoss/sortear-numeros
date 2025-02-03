@@ -7,6 +7,16 @@ function sortear(){
    let sorteados = [];
    let numero;
 
+   if (doNumero >= ateNumero) {
+      alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
+      return;
+    }
+
+    if (quantidade > (ateNumero - doNumero + 1)) {
+      alert('Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!');
+      return;
+    }
+
    for (let i = 0; i < quantidade; i++){
       
       numero = obterNumeroAleatorio(doNumero, ateNumero);
